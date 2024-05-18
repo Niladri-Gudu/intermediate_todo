@@ -10,8 +10,6 @@ const Form = ( { tasks, setTasks } ) => {
 
     setTasks([...tasks, {id: Date.now(), task: value, completed: false}])
 
-    console.log(tasks)
-
     setValue("")
   }
 

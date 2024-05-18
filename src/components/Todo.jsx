@@ -7,13 +7,13 @@ const Todo = ( { setTasks, tasks, task } ) => {
   const deleteHandler = (id) => {
     const updatedTasks = tasks.filter((task) => task.id !== id);
     setTasks(updatedTasks);
-    localStorage.setItem("tasks", JSON.stringify(updatedTasks));
+    // localStorage.setItem("tasks", JSON.stringify(updatedTasks));
   }
 
   const completeHandler = (id) => {
     const completedtasks = tasks.map((task) => task.id === id ? {...task, completed: !task.completed} : task)
     setTasks(completedtasks);
-    localStorage.setItem("tasks", JSON.stringify(completedtasks));
+    // localStorage.setItem("tasks", JSON.stringify(completedtasks));
   }
 
   const editHandler = (id, task) => {
